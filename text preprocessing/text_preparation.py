@@ -25,7 +25,8 @@ for line in stop:
     l = line.strip()
     stopwords.append(l)
 
-file_lemma = 'lemmatization-lists-master/lemmatization-es.txt'
+language = 'es' #es, en, ca or 
+file_lemma = 'lemmatization-'+language+'.txt'
 lemma_table = pd.read_csv(file_lemma, encoding='utf-8', sep='\t')
 
 filename = 'spanish_val.csv'
