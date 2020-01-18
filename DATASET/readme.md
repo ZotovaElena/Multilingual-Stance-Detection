@@ -5,4 +5,4 @@ LEMMA_CLEAN - lemmatized text without stopwords and short words, without diacrit
 
 CLEAN - text without stoprwords, with diacritics 
 
-CLEAN_FULL - full cleaned not lemmatized text, with diacritics, used for word embedding models 
+CLEAN_FULL - cleaned not lemmatized full text, with diacritics, used for word embedding models 
