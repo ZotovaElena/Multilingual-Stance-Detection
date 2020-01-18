@@ -3,6 +3,13 @@
 Created on Sun Nov 10 13:42:55 2019
 
 @author: EZOTOVA
+
+#as a result we hace a table with the following columns: 
+LEMMA - full lemmatized text 
+LEMMA_CLEAN - lemmatized text without stopwords and short words, normalized as much as possible, this part used for SVM model for reducing the dimensionality of the matrix
+CLEAN - text without stoprwords but with diacritics 
+CLEAN_FULL - full cleaned text, used for word embedding models 
+
 """
 
 import pandas as pd
@@ -89,6 +96,8 @@ df_preprocessed['LEMMA_CLEAN'] = list_of_tweets_lema_clean #tweets with maximal 
 
 to_file = 'val_hSVM_castellano_dataset.csv'
 df_preprocessed.to_csv(to_file, sep='\t', encoding='utf-8', index=False)
+
+
 
 #test.to_csv('test_hSVM_'+filename, sep='\t', encoding='utf-8', index=False)
 #val.to_csv('val_hSVM_'+filename, sep='\t', encoding='utf-8', index=False)
