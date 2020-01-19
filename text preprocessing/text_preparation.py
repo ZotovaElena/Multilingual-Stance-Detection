@@ -5,6 +5,7 @@ Created on Sun Nov 10 13:42:55 2019
 @author: EZOTOVA
 
 #as a result we hace a table with the following columns: 
+TWEET - original text
 LEMMA - full lemmatized text 
 LEMMA_CLEAN - lemmatized text without stopwords and short words, normalized as much as possible, this part used for SVM model for reducing the dimensionality of the matrix
 CLEAN - text without stoprwords but with diacritics 
