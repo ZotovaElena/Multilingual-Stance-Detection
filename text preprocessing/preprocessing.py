@@ -103,7 +103,7 @@ def getTokens(list_of_strings):
     for line in list_of_strings:
         line = re.sub(link, '', line)
         line = removePunctuation(line)
-        line_tokens = line.lower().split()
+        line_tokens = line.split()
         list_of_strings_tokenized.append(line_tokens)
     return list_of_strings_tokenized
 
