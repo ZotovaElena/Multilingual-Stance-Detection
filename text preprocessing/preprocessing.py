@@ -63,7 +63,7 @@ u = re.compile(r'u{2,}')
 f = re.compile(r'f{2,}')
 h = re.compile(r'h{2,}')
 m = re.compile(r'm{2,}')
-rt = re.compile(r'rt')
+rt = re.compile(r'RT')
 link = re.compile(r'(https?|http)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]')
 
 punctuation = ['!', '"', '$', '%', '&', "'", '€'
@@ -127,6 +127,7 @@ def normalizeLine(tokens_list):
             t = re.sub(h, 'h', t)
             t = re.sub(m, 'm', t)
             t = re.sub(rt, '', t)
+	    t = t.lower()
                       
             token_line.append(t)
         tokens_line_preproc.append(token_line)
