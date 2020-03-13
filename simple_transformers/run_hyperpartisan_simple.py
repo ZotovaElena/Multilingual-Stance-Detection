@@ -66,30 +66,6 @@ args = {
     'reprocess_input_data': True
 }
 
-train_args = {
-    'output_dir': f'{model_type}-{model_name}-outputs',
-    'max_seq_length': 128,
-    'num_train_epochs': 10,
-    'train_batch_size': 32,
-    'eval_batch_size': 32,
-    'gradient_accumulation_steps': 1,
-    'learning_rate': 2e-5,
-    'save_steps': 2000,
-
-    'wandb_project': 'ag-news-transformers-comparison',
-    'wandb_kwargs': {'name': f'{model_type}-{model_name}'},
-    'evaluate_during_training': False,
-    'evaluate_during_training_steps': 1000,
-    'reprocess_input_data': True,
-    "save_model_every_epoch": False,
-    'overwrite_output_dir': True,
-    'no_cache': True,
-
-    'use_early_stopping': True,
-    'early_stopping_patience': 3,
-    'manual_seed': 4,
-}
-
 print(model_type)
 print(model_name)
 
