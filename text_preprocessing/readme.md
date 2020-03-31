@@ -1,4 +1,4 @@
-**Preprocessing types** 
+## **Preprocessing types** 
 
 - **Type A**
 
@@ -21,31 +21,35 @@
 
 **Preprocessed:** manipulador cayo este hablar polaco suelto fachamierda #zasca
 
--Type B
+- Type B
 
-punctuation
-URLs
-numbers
-usernames
-normalization
-emojis
-lowercase
-hashtags
-RT
+* punctuation
+* URLs
+* numbers
+* usernames
+* normalization
+* emojis
+* lowercase
+* hashtags
+* RT
 
--Type C
+**Preprocessed:** ten manipuladora  se te cayó el me estas hablando en polaco que le suelta el fachamierda primero #zasca
 
-punctuation
-URLs
-hashtags
-@
+- Type C
 
-Type D
+* punctuation
+* URLs
+* hashtags
+* @
 
-URLs
-hashtags
-@
-RT
+**Preprocessed:** pilarcpilarc Ten manipuladora 💅💅 se te cayó el ME ESTAS HABLANDO EN POLACO que le suelta el fachamierda primero ZASCA
 
+- Type D
+
+* URLs
+* hashtags
+* @
+
+**Preprocessed:** pilarc_pilarc Ten, manipuladora 💅💅 se te cayó el ME ESTAS HABLANDO EN POLACO?? que le suelta el fachamierda primero ZASCA
 
 
