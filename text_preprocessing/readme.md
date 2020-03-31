@@ -3,7 +3,7 @@
 ### Type A
 
 * punctuation
-* URLs'
+* URLs
 * numbers
 * stopwords
 * shortwords
