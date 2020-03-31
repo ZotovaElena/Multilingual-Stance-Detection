@@ -1,19 +1,19 @@
 **Preprocessing types** 
 
--Type A 
+- **Type A**
 
-punctuation
-URLs'
-numbers
-stopwords
-shortwords
-diacritics
-usernames
-normalization
-emojis
-lemmatize
-lowercase
-RT
+* punctuation
+* URLs'
+* numbers
+* stopwords
+* shortwords
+* diacritics
+* usernames
+* normalization
+* emojis
+* lemmatize
+* lowercase
+* RT
 
 **Example:** 
 
