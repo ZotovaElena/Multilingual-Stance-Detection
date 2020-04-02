@@ -266,8 +266,10 @@ s = ['RT @JuanGosset: Holaaaaaaaaa El independentismo es el arte de engañar usa
 
 sent = 'RT @JuanGosset: Holaaaaaaaaa El independentismo es el arte voy de engañar usando la expresión #HASHTAG a puntos de . https://t.co/3dHQ9jqtNT'
 
+#example with a string
 result = textPreprocessing(sent, preprocessing_D, 'es')
 print('PREPROCESSING D ', result)
 
+#example with dataframe
 df = pd.DataFrame(data = {'text':s})
 df['text_new'] = df['text'].apply(textPreprocessing, args=(config_dict, 'es'))
