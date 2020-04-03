@@ -1,7 +1,0 @@
-class,precision,recall,f1-score,support
-AGAINST,0.628,0.6607,0.6439,843.0
-FAVOR,0.6928,0.6485,0.6699,953.0
-NEUTRAL,0.7305,0.7774,0.7532,265.0
-accuray,,,0.6701,2061.0
-macro avg,0.6838,0.6955,0.689,2061.0
-weighted avg,0.6711,0.6701,0.67,2061.0
