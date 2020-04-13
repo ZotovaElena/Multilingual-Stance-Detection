@@ -268,64 +268,77 @@ def textPreprocessing(line, config_dict, language):
 # sent = 'RT @JuanGosset: Holaaaaaaaaa El independentismo es el arte voy de engañar usando la expresión #HASHTAG a puntos de . https://t.co/3dHQ9jqtNT'
 
 
-path = '/home/elena/Desktop/Independencia/Dataset_Español/DATASET'
+path = '/home/elena/Desktop/Independencia/Dataset_Español/experiment_data'
 
 lan = 'es'
 
-df_train = pd.read_csv(os.path.join(path, 'spanish_train.csv'), sep='\t', dtype={'id_str': 'str'})
+df_train = pd.read_csv(os.path.join(path, 'spanish_train_user_exp_rand.csv'), sep='\t', dtype={'id_str': 'str'})
+df_train = df_train[['id_str', 'TWEET', 'LABEL']]
+df_train.to_csv('spanish_train_exp.csv', sep='\t', index=False)
+
 df_train['preprocessing_A'] = df_train['TWEET'].apply(textPreprocessing, args=(preprocessing_A, lan))
-df_train.to_csv('spanish_train_type_A.csv', sep='\t', index=False)
+df_train = df_train[['id_str', 'TWEET', 'LABEL', 'preprocessing_A']]
+df_train.to_csv('spanish_train_exp_type_A.csv', sep='\t', index=False)
 
 df_train['preprocessing_B'] = df_train['TWEET'].apply(textPreprocessing, args=(preprocessing_B, lan))
 df_train = df_train[['id_str', 'TWEET', 'LABEL', 'preprocessing_B']]
-df_train.to_csv('spanish_train_type_B.csv', sep='\t', index=False)
+df_train.to_csv('spanish_train_exp_type_B.csv', sep='\t', index=False)
 
 df_train['preprocessing_C'] = df_train['TWEET'].apply(textPreprocessing, args=(preprocessing_C, lan))
 df_train = df_train[['id_str', 'TWEET', 'LABEL', 'preprocessing_C']]
-df_train.to_csv('spanish_train_type_C.csv', sep='\t', index=False)
+df_train.to_csv('spanish_train_exp_type_C.csv', sep='\t', index=False)
 
 df_train['preprocessing_D'] = df_train['TWEET'].apply(textPreprocessing, args=(preprocessing_D, lan))
 df_train = df_train[['id_str', 'TWEET', 'LABEL', 'preprocessing_D']]
-df_train.to_csv('spanish_train_type_D.csv', sep='\t', index=False)
+df_train.to_csv('spanish_train_exp_type_D.csv', sep='\t', index=False)
 
 
 # TEST
 
-df_test = pd.read_csv(os.path.join(path, 'spanish_test.csv'), sep='\t', dtype={'id_str': 'str'})
+df_test = pd.read_csv(os.path.join(path, 'spanish_test_user_exp_rand.csv'), sep='\t', dtype={'id_str': 'str'})
+df_test = df_test[['id_str', 'TWEET', 'LABEL']]
+df_test.to_csv('spanish_test_exp.csv', sep='\t', index=False)
+
+
 df_test['preprocessing_A'] = df_test['TWEET'].apply(textPreprocessing, args=(preprocessing_A, lan))
-df_test.to_csv('spanish_test_type_A.csv', sep='\t', index=False)
+df_test = df_test[['id_str', 'TWEET', 'LABEL', 'preprocessing_A']]
+df_test.to_csv('spanish_test_exp_type_A.csv', sep='\t', index=False)
 
 df_test['preprocessing_B'] = df_test['TWEET'].apply(textPreprocessing, args=(preprocessing_B, lan))
 df_test = df_test[['id_str', 'TWEET', 'LABEL', 'preprocessing_B']]
-df_test.to_csv('spanish_test_type_B.csv', sep='\t', index=False)
+df_test.to_csv('spanish_test_exp_type_B.csv', sep='\t', index=False)
 
 df_test['preprocessing_C'] = df_test['TWEET'].apply(textPreprocessing, args=(preprocessing_C, lan))
 df_test = df_test[['id_str', 'TWEET', 'LABEL', 'preprocessing_C']]
-df_test.to_csv('spanish_test_type_C.csv', sep='\t', index=False)
+df_test.to_csv('spanish_test_exp_type_C.csv', sep='\t', index=False)
 
 df_test['preprocessing_D'] = df_test['TWEET'].apply(textPreprocessing, args=(preprocessing_D, lan))
 df_test = df_test[['id_str', 'TWEET', 'LABEL', 'preprocessing_D']]
-df_test.to_csv('spanish_test_type_D.csv', sep='\t', index=False)
+df_test.to_csv('spanish_test_exp_type_D.csv', sep='\t', index=False)
 
 # VAL
 
-df_val = pd.read_csv(os.path.join(path, 'spanish_val.csv'), sep='\t', dtype={'id_str': 'str'})
+df_val = pd.read_csv(os.path.join(path, 'spanish_val_user_exp_rand.csv'), sep='\t', dtype={'id_str': 'str'})
+df_val = df_val[['id_str', 'TWEET', 'LABEL']]
+df_val.to_csv('spanish_val_exp.csv', sep='\t', index=False)
+
 df_val['preprocessing_A'] = df_val['TWEET'].apply(textPreprocessing, args=(preprocessing_A, lan))
-df_val.to_csv('spanish_val_type_A.csv', sep='\t', index=False)
+df_val = df_val[['id_str', 'TWEET', 'LABEL', 'preprocessing_A']]
+df_val.to_csv('spanish_val_exp_type_A.csv', sep='\t', index=False)
 
 
 df_val['preprocessing_B'] = df_val['TWEET'].apply(textPreprocessing, args=(preprocessing_B, lan))
 df_val = df_val[['id_str', 'TWEET', 'LABEL', 'preprocessing_B']]
-df_val.to_csv('spanish_val_type_B.csv', sep='\t', index=False)
+df_val.to_csv('spanish_val_exp_type_B.csv', sep='\t', index=False)
 
 df_val['preprocessing_C'] = df_val['TWEET'].apply(textPreprocessing, args=(preprocessing_C, lan))
 df_val = df_val[['id_str', 'TWEET', 'LABEL', 'preprocessing_C']]
-df_val.to_csv('spanish_val_type_C.csv', sep='\t', index=False)
+df_val.to_csv('spanish_val_exp_type_C.csv', sep='\t', index=False)
 
 
 df_val['preprocessing_D'] = df_val['TWEET'].apply(textPreprocessing, args=(preprocessing_D, lan))
 df_val = df_val[['id_str', 'TWEET', 'LABEL', 'preprocessing_D']]
-df_val.to_csv('spanish_val_type_D.csv', sep='\t', index=False)
+df_val.to_csv('spanish_val_exp_type_D.csv', sep='\t', index=False)
 
 
 #example with a string
