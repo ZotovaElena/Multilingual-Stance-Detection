@@ -24,8 +24,8 @@ def flat_list(l):
 	flat_list = [item for sublist in l for item in sublist]
 	return flat_list
 
-path_cat = "/home/elena/Desktop/Multilingual-Stance-Detection/CIC_2020_Dataset/data_type_d/catalan"
-to_path_cat = "/home/elena/Desktop/Multilingual-Stance-Detection/CIC_2020_Dataset/data_type_d/catalan/translated"
+path_cat = "data_type_d/catalan"
+to_path_cat = "data_type_d/catalan/translated"
 
 file_train_cat = "train.tsv"
 file_dev_cat = "dev.tsv"
