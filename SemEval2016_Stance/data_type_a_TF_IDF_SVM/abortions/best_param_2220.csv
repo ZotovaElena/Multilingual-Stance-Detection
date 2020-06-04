@@ -1,0 +1,2 @@
+mean_fit_time,std_fit_time,mean_score_time,std_score_time,param_classification__C,param_classification__gamma,params,split0_test_score,split1_test_score,split2_test_score,split3_test_score,split4_test_score,mean_test_score,std_test_score,rank_test_score
+4.659387302398682,0.16063892545306735,0.010136604309082031,0.0001519478098342634,700,0.001,"{'classification__C': 700, 'classification__gamma': 0.001}",0.6641221374045801,0.6183206106870229,0.6641221374045801,0.6461538461538462,0.6230769230769231,0.6431591309453905,0.019535151702986493,1
