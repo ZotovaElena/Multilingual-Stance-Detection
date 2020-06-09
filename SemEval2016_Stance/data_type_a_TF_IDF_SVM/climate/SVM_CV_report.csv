@@ -1,0 +1,9 @@
+Unnamed: 0,precision,recall,f1-score,support
+,,,,
+AGAINST,1.0,0.2,0.3333,15.0
+FAVOR,0.7328,0.8019,0.7658,212.0
+NEUTRAL,0.725,0.6905,0.7073,168.0
+,,,,
+accuracy,,,0.7316,395.0
+macro avg,0.8193,0.5641,0.6021,395.0
+weighted avg,0.7396,0.7316,0.7245,395.0

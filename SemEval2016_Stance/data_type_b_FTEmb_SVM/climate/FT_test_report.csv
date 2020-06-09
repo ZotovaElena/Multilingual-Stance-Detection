@@ -1,0 +1,9 @@
+Unnamed: 0	precision	recall	f1-score	support
+				
+AGAINST	0.0	0.0	0.0	11.0
+FAVOR	0.8167	0.7967	0.8066	123.0
+NONE	0.4082	0.5714	0.4762	35.0
+				
+accuracy			0.6982	169.0
+macro avg	0.4083	0.4561	0.4276	169.0
+weighted avg	0.6789	0.6982	0.6857	169.0
