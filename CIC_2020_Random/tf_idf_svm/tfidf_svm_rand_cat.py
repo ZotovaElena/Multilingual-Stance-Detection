@@ -55,13 +55,13 @@ print('X TEST ', X_test.shape)
 
 le = preprocessing.LabelEncoder()
 
-le.fit(['AGAINST','FAVOR', 'NEUTRAL'])
+le.fit(['AGAINST','FAVOR', 'NONE'])
 y_train = le.transform(labels_train)
 print('Y TRAIN ', y_train.shape)
 
 #Encode the labes to integers
 le = preprocessing.LabelEncoder()
-le.fit(['AGAINST','FAVOR', 'NEUTRAL'])
+le.fit(['AGAINST','FAVOR', 'NONE'])
 y_test = le.transform(labels_test)
 print('Y TEST', y_test.shape)
 
@@ -124,7 +124,7 @@ print('CV RESULTS ', cv_results['test_score'])
 y_pred = cross_val_predict(clf, X_train, y_train, 
                            cv=10, n_jobs=4)
 
-target_names=["AGAINST", "FAVOR", "NEUTRAL"]
+target_names=["AGAINST", "FAVOR", "NONE"]
 cl_report = classification_report(y_train, y_pred, target_names=target_names, digits=4)
 cm = confusion_matrix(y_train, y_pred)
 print(cm)
@@ -174,7 +174,7 @@ print('RECALL ', recall)
 cm = confusion_matrix(y_test, y_pred_test)
 print('CONFUSION MATRIX')
 print(cm)
-target_names=["AGAINST", "FAVOR", "NEUTRAL"]
+target_names=["AGAINST", "FAVOR", "NONE"]
 
 #save the classification reports
 cl_report_test = classification_report(y_test, y_pred_test, target_names=target_names, digits=4)
