@@ -12,7 +12,7 @@ import numpy as np
 from gensim.models import FastText
 
 #Loading pretrained word2vec model. 
-model = FastText.load_fasttext_format('c:/Users/ezotova/Desktop/Python/Dataset_Español/fasttext/cc.es.300.bin')
+model = FastText.load_fasttext_format('c:/Users/ezotova/Desktop/Python/Dataset_Español/fasttext/cc.es.300.bin') 
 w2v_vectors = model.wv.vectors 
 w2v_indices = {word: model.wv.vocab[word].index for word in model.wv.vocab} 
 num_features = model.vector_size
@@ -124,14 +124,14 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 labels_train = list(tweets_train.LABEL.values)
 #Encode the labes to integers
 le = preprocessing.LabelEncoder()
-le.fit(['AGAINST','FAVOR', 'NEUTRAL'])
+le.fit(['AGAINST','FAVOR', 'NONE'])
 labels_int_train = le.transform(labels_train)
 
 #labels from test set
 labels_test = list(tweets_test.LABEL.values)
 #Encode the labes to integers
 le = preprocessing.LabelEncoder()
-le.fit(['AGAINST','FAVOR', 'NEUTRAL'])
+le.fit(['AGAINST','FAVOR', 'NONE'])
 labels_int_test = le.transform(labels_test)
 
 #x_train, x_test, y_train, y_test = train_test_split(X, labels_int, test_size=0.1, random_state=0)
@@ -198,7 +198,7 @@ print('CV RESULTS WITHOUT LEMMA ', cv_results['test_score'])
 y_pred = cross_val_predict(clf, X_train, y_train, 
                            cv=10, n_jobs=4)
 
-target_names=["AGAINST", "FAVOR", "NEUTRAL"]
+target_names=["AGAINST", "FAVOR", "NONE"]
 cl_report = classification_report(y_train, y_pred, target_names=target_names, digits=4)
 cm = confusion_matrix(y_train, y_pred)
 print(cm)
@@ -239,7 +239,7 @@ print('RECALL ', recall)
 cm = confusion_matrix(y_test, y_pred_test)
 print('CONFUSION MATRIX')
 print(cm)
-target_names=["AGAINST", "FAVOR", "NEUTRAL"]
+target_names=["AGAINST", "FAVOR", "NONE"]
 #save the classification reports
 cl_report_test = classification_report(y_test, y_pred_test, target_names=target_names, digits=4)
 report_df_test = pd.read_fwf(io.StringIO(cl_report_test), sep="\s+")
