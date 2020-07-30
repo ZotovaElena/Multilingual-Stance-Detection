@@ -2,7 +2,7 @@ Unnamed: 0	precision	recall	f1-score	support
 				
 AGAINST	0.6959	0.7177	0.7067	829.0
 FAVOR	0.6918	0.7398	0.715	807.0
-NEUTRAL	0.9497	0.7447	0.8348	380.0
+NONE	0.9497	0.7447	0.8348	380.0
 				
 accuracy			0.7316	2016.0
 macro avg	0.7791	0.7341	0.7521	2016.0
